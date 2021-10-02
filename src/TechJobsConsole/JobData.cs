@@ -70,10 +70,10 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> row in AllJobs)
             {
-                foreach (string column in row.Values)
+                foreach (string column in row.Keys)
                 {
                     string aValue = row[column];
-                    if (aValue.Contains(value))
+                    if (aValue.Contains(value) && !jobs.Contains(row))
                     {
                         jobs.Add(row);
                     }
